@@ -1,4 +1,6 @@
 
+demo学习链接: https://segmentfault.com/a/1190000006178770
+
 ##### 使用打包命令
 {extry file}出填写入口文件的路径，本文中就是上述main.js的路径<br/>
 {destination for bundled file}处填写打包文件的存放路径<br/>
