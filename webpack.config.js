@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
 
     devtool: 'eval-source-map', // Source Maps 提供对应编译文件和源文件的方法,使得编译后的代码可读性更高,也更容易调试
@@ -40,9 +42,15 @@ module.exports = {
                             localsConvention: "camelCase" // 3.2.0新增属性, 'camelCase'类名将被驼峰化，初始类名不会从局部变量中删除。
                             // localIdentName: '[name]__[local]___[hash:base64:5]' // 指定css的类名格式 3.2.0版本没有这个属性
                         }
+                    }, {
+                        loader: "postcss-loader"
                     }
                 ]
             }
         ]
-    }
+    },
+
+    plugins: [
+        new webpack.BannerPlugin('版权所有，翻版必究')
+    ]
 }
