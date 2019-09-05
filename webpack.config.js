@@ -27,6 +27,21 @@ module.exports = {
                     }
                 },
                 exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: "style-loader"
+                    }, {
+                        loader: "css-loader",
+                        options: {
+                            modules: true, // 指定启用css modules
+                            localsConvention: "camelCase" // 3.2.0新增属性, 'camelCase'类名将被驼峰化，初始类名不会从局部变量中删除。
+                            // localIdentName: '[name]__[local]___[hash:base64:5]' // 指定css的类名格式 3.2.0版本没有这个属性
+                        }
+                    }
+                ]
             }
         ]
     }
