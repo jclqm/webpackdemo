@@ -31,3 +31,7 @@ babel-loader 7.x对应babel-core 6.x<br/>
 babel-loader和babel-core版本不匹配出现的问题<br/>
 demo采用的方法是对babel-loader版本降级<br/>
 cnpm install babel-loader@7 --save-dev<br/>
+
+
+extract-text-webpack-plugin 插件只适用于webpack3<br/>
+webpack4 安装后会出警告,处理css应该使用mini-css-extract-plugin,修改这个插件(github: https://github.com/webpack-contrib/mini-css-extract-plugin)
